@@ -13,22 +13,35 @@
     />
   </head>
   <body>
-    <header>
-      <h1>Blueberry-weather-app</h1>
-    </header>
+    <h1>Blueberry-weather-app</h1>
+
     <div class="weatherAppArea">
-      <main>
+      <header>
         <form>
-          <input type="search" placeholder="Enter city" required />
+          <input
+            type="search"
+            placeholder="Enter city"
+            required
+            class="enterCityArea"
+          />
           <input type="submit" value="search" class="submitButton" />
         </form>
-
-        <div>
-          <h3>Paris</h3>
-          <p>Monday 19:22, moderate rain</p>
-          <p>Humidity: 87%, Wind: 7.2km/h</p>
+      </header>
+      <main>
+        <div class="weatherAppContent">
+          <div>
+            <h3 class="weatherAppCity">Paris</h3>
+            <p class="weatherAppDate">Monday 19:22, moderate rain</p>
+            <p class="weatherAppHumidity">
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="weatherAppTemperature">
+            <div class="weatherEmoji">⛅</div>
+            <div class="temperature">17</div>
+            <div class="temperatureUnit">℃</div>
+          </div>
         </div>
-        <div><p>⛅17℃</p></div>
       </main>
 
       <footer>

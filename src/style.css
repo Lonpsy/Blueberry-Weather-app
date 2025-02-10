@@ -1,14 +1,30 @@
 body {
   background-color: rgb(21, 17, 21);
   font-family: "Roboto", serif;
-  h1 {
-    text-align: center;
-    color: rgb(240, 248, 255);
-  }
-  input {
-    padding: 8px;
-    border-radius: 4px;
-  }
+}
+h1 {
+  text-align: center;
+  color: rgb(240, 248, 255);
+}
+header {
+  border-bottom: 1px solid rgb(230, 118, 228, 0.6);
+  padding: 0px 0px 30px 0px;
+}
+input {
+  padding: 10px;
+  border-radius: 4px;
+  border: 0px;
+}
+
+.submitButton {
+  background-color: rgb(230, 118, 228);
+  margin: 0px;
+  padding: 8px;
+  font-size: 16px;
+  margin-left: 5px;
+}
+.enterCityArea {
+  width: 80%;
 }
 .weatherAppArea {
   background-color: rgb(233, 236, 238);
@@ -20,6 +36,50 @@ body {
   border-radius: 16px;
   box-shadow: 0px 30px 40px rgb(143, 37, 142);
 }
-.submitButton {
-  background-color: rgb(230, 118, 228);
+.weatherAppContent {
+  display: flex;
+  justify-content: space-between;
+}
+.weatherAppCity {
+  font-size: 38px;
+  line-height: 48px;
+  margin: 10px;
+}
+.weatherAppDate {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(64, 60, 63, 0.6);
+}
+.weatherAppHumidity {
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(64, 60, 63, 0.6);
+}
+.weatherAppHumidity strong {
+  color: blueviolet;
+}
+.weatherAppTemperature {
+  display: flex;
+  font-size: 38px;
+  margin-top: 0px;
+}
+.temperature {
+  font-size: 88px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.weatherEmoji {
+  font-size: 44px;
+  margin-top: 22px;
+}
+.temperatureUnit {
+  margin-top: 16px;
+  font-size: 28px;
+}
+footer {
+  border-top: 1px solid rgb(230, 118, 228, 0.6);
+  padding: 30px 0px 20px 0px;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(64, 58, 64, 0.6);
 }
