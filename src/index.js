@@ -1,7 +1,13 @@
 function updateTemperature(response) {
   let Temperature = document.querySelector("#tempEntered");
-
+  let description = document.querySelector("#weather-description");
+  let humidity = document.querySelector("#Humidity");
+  let speed = document.querySelector("#speed");
   Temperature.innerHTML = Math.round(response.data.temperature.current);
+  description.innerHTML = response.data.condition.description;
+  humidity.innerHTML = `${response.data.temperature.humidity}%`;
+  speed.innerHTML = `${response.data.wind.speed}km/h`;
+  console.log("new date()");
 }
 
 function cityInputDetails(City) {
