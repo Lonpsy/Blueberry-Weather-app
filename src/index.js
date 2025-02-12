@@ -1,5 +1,6 @@
 function updateTemperature(response) {
   let Temperature = document.querySelector("#tempEntered");
+
   Temperature.innerHTML = Math.round(response.data.temperature.current);
 }
 
@@ -19,3 +20,5 @@ function updateCity(event) {
 
 let formInput = document.querySelector("#weather-form");
 formInput.addEventListener("submit", updateCity);
+
+cityInputDetails("gothenburg");
