@@ -3,6 +3,9 @@ function updateTemperature(response) {
   let description = document.querySelector("#weather-description");
   let humidity = document.querySelector("#Humidity");
   let speed = document.querySelector("#speed");
+  let discriptionIcon = document.querySelector("#weather-Emoji");
+  discriptionIcon.innerHTML = `<img src= "${response.data.condition.icon_url}"class="weatherEmoji"
+                >`;
   Temperature.innerHTML = Math.round(response.data.temperature.current);
   description.innerHTML = response.data.condition.description;
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
