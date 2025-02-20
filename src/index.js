@@ -7,7 +7,24 @@ function updateTemperature(response) {
   description.innerHTML = response.data.condition.description;
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
   speed.innerHTML = `${response.data.wind.speed}km/h`;
-  console.log("new date()");
+  let date = new Date(response.data.time * 1000);
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = weekDays[date.getDay()];
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let realTime = document.querySelector("#dayTime");
+  realTime.innerHTML = `${day} ${hour}:${minutes}`;
 }
 
 function cityInputDetails(City) {
